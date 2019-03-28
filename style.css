@@ -1,0 +1,125 @@
+/*generale*/
+*
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+.form-box
+    {
+        /* max-width: 600px; */
+        width: 100%;
+        /* position: fixed; */
+        margin: 10px;
+    }
+
+.form-box .form-control
+    {
+        margin: 0!important;
+    }
+
+.col-md-4
+    {
+        padding: 0 !important;
+    }
+
+#all
+    {
+        border: 1px rgb(207, 205, 205) solid;
+        /* margin-top: 25px; */
+        padding: 10px;
+    }
+
+.logo
+    {
+        text-align: center;
+        font-size: 45px;
+        color: white;
+        height: 90px;
+        background-color: cornflowerblue;
+        margin-bottom: 20px;
+    }
+
+        /*card message*/
+.card-body
+    {
+        width: 220px;
+        border-radius: 15px;
+        color: white;
+        box-shadow: 3px 3px 10px black;
+    }
+.fa-user-circle
+    {
+        font-size: 44px;
+        margin: 5px;
+    }
+
+.jumbotron
+    {
+        padding:  0px !important;
+        overflow: scroll;
+        height: 400px;
+        padding: 15px !important;
+    }
+
+#feedback
+    {
+        color: grey;
+    }
+
+        /*log*/
+#log
+    {
+        background-color: rgba(7, 7, 7, 0.815);
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+.box-log
+    {
+        max-width: 500px;
+        margin: 150px auto;
+    }
+
+#form-log .form-control
+    {
+        background-color: rgba(7, 7, 7, 0.185) !important;
+        color: white !important;
+    }
+
+#form-log input::placeholder
+    {
+        font-size: 18px !important; 
+    }
+
+
+#log-button
+    {
+        position: relative;
+        left: 50%;
+        width: 150px;
+        margin-left: -75px;
+        margin-top: 6px;
+        background-color: rgb(5, 82, 247) !important;
+        color: white;
+    }
+
+.welcome 
+    {
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        color: rgb(6, 174, 231) !important;
+        text-shadow: 6px 3px 8px black;
+        font-size: 45px;
+    }
+
+#user-connected
+    {
+        display: inline;
+        font-size: 20px;
+        
+    }

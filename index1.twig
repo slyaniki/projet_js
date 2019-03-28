@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="PROJET_TCHAT/public/style1.css">
+    <link rel="stylesheet" href="PROJET_TCHAT/public/bootstrap1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="PROJET_TCHAT/public/fontawesome1/css/all.min.css">
+    <title> Evivrier-online chat</title>
+</head>
+<body>
+    
+    <div id="log">
+        <div class="container">
+            <div class="box-log">
+                <div class="container">
+                    <form id="form-log">
+                        <span class="welcome">Bienvenue </br> Evivrier-online chat</span>
+                        <input type="text" name="nom" id="nom" class="form-control" placeholder="Enter a nickname">
+                        <div>
+                            <button type="input" id="log-button" class="btn btn-light">rejoinez-nous !</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container-fluid logo">
+             E-vivrier online chat <i class="fa fa-user-friends"></i><span id="user-connected"></span>
+        </div>
+        
+        </header>
+    <div class="container" id="all"> <!--main container-->
+
+        <div class="jumbotron jumbotron" id="box"> <!--msg box-->
+            <!-- <div class="container">
+                <div class="row m-0 justify-content-end">
+                    <div class="message-card">
+                        <div class="card-body bg-primary">
+                            <span>message</span>
+                        
+                    </div>
+                    <span class="receiver-time"><i>name</i></span>
+                </div>
+                <i class="fa fa-user-circle"></i>
+            </div>
+        </div> -->
+        
+    </div>
+    <span id="feedback"></span>
+    
+ 
+    </div> <!--end main container-->
+
+    <div class="container">
+        <div class="form-box"> <!--form box-->
+            <form id="chatForm"  class="form-group">
+                <div class="row ">
+                    <!-- <div class="col-md-6 col-sm-6">
+                        <input type="text" id="nom" name="nom"  class="form-control" placeholder="Votre nom">
+                    </div> -->
+                    <div class="col-md-9 col-sm-9">
+                        <input type="text" id="message"  class="form-control" name="message" placeholder="Votre message">
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <button type="submit" id="envoi" class="btn btn-primary"><i class="fa fa-paper-plane"></i> envoye</button> 
+                    </div>
+                </div>     
+            </form>
+        </div>
+    </div>
+    
+
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="PROJET_TCHAT/public/js1/socket.js"></script>
+    <script src="PROJET_TCHAT/public/js1/chat.js"></script>
+    <script src="PROJET_TCHAT/public/bootstrap1/js/bootstrap.min.js"></script>
+    <script src="PROJET_TCHAT/public/bootstrap1/js/jquery-3.2.1.min.js"></script>
+</body>
+</html>

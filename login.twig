@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>E-VIVRIER | site officiel</title>
+</head>
+<body>
+
+  <body>
+
+     <header id="accueil">
+        <section class="haut-de-page"> <!--haut-de-page-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-logo">
+                        <a href="#accueil">E<span class="bk"></span></a> 
+                    </div>
+                    <div class="col-md-4 social">
+                       <a href="wwww.facebook.com" target="blank"><i class="fab fa-facebook"></i></a>  <a href="www.twitter.com" target="blank"><i class="fab fa-twitter"></i></a>  <a href="www.google-plus.com"><i class="fab fa-google-plus"></i></a>
+                    </div>
+                    <div class="col-md-4 user-icon">
+                        <a href="/communaute"><i class="fa fa-user"></i></a> 
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <nav class="navbar navbar-light navbar-expand-md"> <!--Navbar-->
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="mot-menu">Menu</div> 
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="navbar-nav"> 
+                          <li><a href="/" class="nav-link btn btn-success">Accueil</a></li>
+                            <li><a href="/communaute" class="nav-link">communaute</a></li>
+                          
+                            <li><a href="/" class="nav-link">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>  <!--E.haut-de-page-->
+    </header>
+<section class="section-testimonials section-t8 nav-arrow-a">
+ <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-wrap d-flex justify-content-between">
+            
+          </div>
+        </div>
+      </div>
+
+<div class="container">
+            <div class="membre">
+                Me connecter
+            </div>
+            <div class="divider-blue-membre"></div>
+            <p class="membre-p">connectez-vous et decouvrez une communauté à votre écoute</p>
+
+        
+                <div class="user-icon-register"><i class="fa fa-user"></i></div>
+            <section class="block-inscription">
+                <form method="POST" action="/communaute">
+                    <div class="formulaire-inscription col-lg-offset-1"> <!-- form-->
+                        <div class="row">
+                           
+              
+                   
+                 <div class="col-md-6">
+                  <h1> connection</h1>
+                     {% for error in errors %}
+                          <p> {{error.msg}}</p>
+                       {% endfor %}
+	    				<label for='email'>email <span class='blue'>*</span></label>
+                         <input type='email' id='email' name='email' class='form-control'required='required' value=""  maxlength='100'>
+                          <span id='email_manquant'></span>
+               
+	    				<label for='password'>mot de pass <span class='blue'>*</span></label>
+                         <input type='password' id='password' name='password' class='form-control' required='required' value=""  maxlength='100'>
+                          <span id='passw_manquant'></span>
+                </div></br>
+                <div  class="col-md-6">
+                <p></p></br>
+                </div>
+                <div></div>
+                <div class="col-md-6">
+	    				<input type="submit" class="btn btn-success"  value="se connecter" id='bouton_envoi'></br>
+                         <span >Vous n'avez pas de compte? <a href="/inscription">cliquez ici</a></span>
+	    			</div>
+                       
+                          
+                        
+              </div>
+              </form>
+               <script>
+           var validation = document.getElementById('bouton_envoi');
+              validation.addEventListener('submit',f_valid);
+           var email = document.getElementById('email');
+           var email_m = document.getElementById('email_manquant');
+            var password = document.getElementById('password');
+           var passw_m = document.getElementById('passw_manquant');
+           
+            function f_valid(e) {
+                 if( email.validity.valueMissing){
+                     e.preventDefault();
+                     email_m.textContent = 'veillez saisir votre email';
+                     email_m.style.color = 'red';
+                 }
+                 else{
+                    e.preventDefault();
+                     email_m.textContent = '√';
+                     email_m.style.color = 'green';
+                 }
+                  if( password.validity.valueMissing){
+                     e.preventDefault();
+                     passw_m.textContent = 'veillez saisir votre mot de pass';
+                     passw_m.style.color = 'red';
+                 }
+                 else{
+                    e.preventDefault();
+                     passw_m.textContent = '√';
+                     passw_m.style.color = 'green';
+                 }
+               
+            }     
+           </script>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   <footer> <!--Footer-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1> E-vivrier</h1>
+                    <P>fiabilité, securité, experience <br/>
+                        Evivrier@corp.ci  |  21 22 23 24 | 68 00 00 00
+                    </P>
+                </div>
+                <div class="col-sm-6">
+                    <i class="fa fa-user-circle"></i>
+                    <h2>Espace membre</h2>
+                    <h5>inscription, communaute, conseil</h5>
+                    <a href="/inscription" class="btn btn-outline-primary" type="button" role="button"> S'inscrire</a>
+                    
+                </div>
+            </div>  
+            <div class="col-sm-12">
+                <div class="copyright">
+                    <div>
+                        <i class="fa fa-copyright"></i>  copyright - tout droit reservé à E-vivrier
+                        <p>site creer par <span id="aniki">Aniki hvck</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer> <!--E.Footer-->
+
+    <script src="bootstrap/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="bootstrap/js/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+</body>
+</html>
